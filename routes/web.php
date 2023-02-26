@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\MasterSetup\MasterSetupController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,8 +24,13 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::controller(CustomAuthController::class)->group(function(){
+Route::controller(CustomAuthController::class)->group(function () {
     Route::get('logout', 'destroy')->name('logout');
+});
+
+Route::controller(MasterSetupController::class)->group(function () {
+    Route::get('create-worker', 'create')->name('create.worker');
+    Route::post('insert-worker', 'insert')->name('insert.worker');
 });
 
 Route::middleware('auth')->group(function () {
@@ -33,4 +39,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
