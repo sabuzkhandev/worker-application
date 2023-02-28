@@ -2,7 +2,7 @@
     <nav class="navbar navbar-static-top">
         <div class="container">
             <div class="navbar-header">
-                <a href="../../index2.html" class="navbar-brand"><b>App</b>lication</a>
+                <a href="{{route('dashboard')}}" class="navbar-brand"><b>App</b>lication</a>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#navbar-collapse">
                     <i class="fa fa-bars"></i>
@@ -19,7 +19,7 @@
                                 class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="{{route('create.worker')}}">Create</a></li>
-                            <li><a href="#">Another action</a></li>
+                            <li><a href="{{route('bill.price')}}">Bill Price</a></li>
                             <li><a href="#">Something else here</a></li>
                             <li class="divider"></li>
                             <li><a href="#">Separated link</a></li>

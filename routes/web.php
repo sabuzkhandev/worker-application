@@ -31,7 +31,11 @@ Route::controller(CustomAuthController::class)->group(function () {
 Route::controller(MasterSetupController::class)->group(function () {
     Route::get('create-worker', 'create')->name('create.worker');
     Route::post('insert-worker', 'insert')->name('insert.worker');
+    Route::get('bill-price', 'bill_price_create')->name('bill.price');
+    Route::post('bill-price-insert', 'bill_price_insert')->name('insert_bill_price');
 });
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
