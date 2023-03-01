@@ -14,4 +14,6 @@ class Worker extends Model
         'worker_type',
         'status',
     ];
+
+    public $timestamps = true;
 }

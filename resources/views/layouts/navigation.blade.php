@@ -18,9 +18,9 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span
                                 class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{route('create.worker')}}">Create</a></li>
+                            <li><a href="{{route('create.worker')}}">Create Worker</a></li>
                             <li><a href="{{route('bill.price')}}">Bill Price</a></li>
-                            <li><a href="#">Something else here</a></li>
+                            <li><a href="{{route('createDailyProduction')}}">Daily Production</a></li>
                             <li class="divider"></li>
                             <li><a href="#">Separated link</a></li>
                             <li class="divider"></li>

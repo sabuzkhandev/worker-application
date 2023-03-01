@@ -5,14 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class BillPrice extends Model
+class Daily_production extends Model
 {
     use HasFactory;
 
     protected $fillable = [
+        'worker_id',
         'bill_price',
-        'worker_type',
-        'status'
+        'qty',
+        'total'
     ];
 
     public $timestamps = true;

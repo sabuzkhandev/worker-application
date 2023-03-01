@@ -31,8 +31,13 @@ Route::controller(CustomAuthController::class)->group(function () {
 Route::controller(MasterSetupController::class)->group(function () {
     Route::get('create-worker', 'create')->name('create.worker');
     Route::post('insert-worker', 'insert')->name('insert.worker');
+    Route::get('worker_list', 'workerList')->name('worker_list');
     Route::get('bill-price', 'bill_price_create')->name('bill.price');
     Route::post('bill-price-insert', 'bill_price_insert')->name('insert_bill_price');
+    Route::get('bill-price-list', 'bill_price_list')->name('bill_price_list');
+    Route::get('create_daily_production', 'createProduction')->name('createDailyProduction');
+    Route::post('insert_daily_production', 'InsertProduction')->name('insertDailyProduction');
+    Route::get('daily-production-list', 'productionList')->name('dailyProductionList');
 });
 
 
